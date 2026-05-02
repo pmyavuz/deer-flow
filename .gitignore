@@ -60,3 +60,13 @@ config.yaml.bak
 /frontend/playwright-report/
 .gstack/
 .worktrees
+
+# Runtime data
+backend/checkpoints.db
+
+# Config backups (timestamped)
+config.yaml.bak.*
+config.yaml.bak2.*
+
+# Nginx config backups (timestamped)
+docker/nginx/nginx.conf.bak.*
