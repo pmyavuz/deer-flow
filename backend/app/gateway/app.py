@@ -233,3 +233,13 @@ This gateway provides custom endpoints for models, MCP configuration, skills, an
 
 # Create app instance for uvicorn
 app = create_app()
+
+# CORS for TypingMind browser plugin
+from fastapi.middleware.cors import CORSMiddleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://www.typingmind.com"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
